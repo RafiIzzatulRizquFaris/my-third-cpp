@@ -17,6 +17,23 @@ int sum_of_digit(int n)
     return (n % 10 + sum_of_digit(n / 10));
 }
 
+class Ball {
+private:
+    string m_color;
+    double m_radius;
+    
+public:
+    Ball(string color = "black", double radius = 10.0){
+        m_color = color;
+        m_radius = radius;
+    }
+    
+    void print(){
+        cout << "Color : " << m_color << ", radius : " << m_radius << endl;
+    }
+};
+
+
 int main(int argc, const char * argv[]) {
     
 //    int n, t1 = 0, t2 = 1, nextTerm = 0;
@@ -53,10 +70,22 @@ int main(int argc, const char * argv[]) {
 //    }
 //    cout << "Factorial of " << n << " = " << result << endl;
     
-    int num = 12345;
-    int result = sum_of_digit(num);
-    cout << "Sum of digits in "<< num <<" is "<< result << endl;
+//    int num = 12345;
+//    int result = sum_of_digit(num);
+//    cout << "Sum of digits in "<< num <<" is "<< result << endl;
     
+    Ball def;
+    def.print();
+    
+    Ball blue("blue");
+    blue.print();
+    
+    Ball twenty("black", 20.0);
+    twenty.print();
+    
+    Ball blueTwenty("blue", 20.0);
+    blueTwenty.print();
     
     return 0;
 }
+
